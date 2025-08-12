@@ -1,0 +1,77 @@
+
+body {
+    background-color: #E2DDB4;
+}
+
+.center {
+        text-align: center;
+}
+
+#generateButton {
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: #E43636;
+    color: #F6EFD2;
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    cursor:  pointer;
+    transition: background-color 0.3s ease;
+}
+
+#generateButton:hover {
+    background-color: #aa2b2b;
+}
+
+#setsDisplay {
+    margin-right: 20px;
+}
+
+#repsDisplay {
+    margin-left: 20px;
+}
+
+.info {
+    display: none;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 15px 30px 15px 30px;
+    font-size: x-large;
+    font-family: Arial;
+    border-radius: 10px;
+    background-color: azure;
+}
+
+.info2 {
+    display: none;
+    font-size: medium;
+    font-family: Arial;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: azure;
+}
+
+#exerciseImage {
+    display: none;
+    margin: 20px auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.p-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#countdown {
+    display: none;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 10px;
+}
