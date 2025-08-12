@@ -1,6 +1,6 @@
 
 body {
-    background-color: #E2DDB4;
+    background-color: #284b63;
 }
 
 .center {
@@ -11,8 +11,8 @@ body {
     font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    background-color: #E43636;
-    color: #F6EFD2;
+    background-color: #ffffff;
+    color: #353535;
     border: none;
     border-radius: 25px;
     padding: 15px;
@@ -21,7 +21,7 @@ body {
 }
 
 #generateButton:hover {
-    background-color: #aa2b2b;
+    background-color: rgba(255, 255, 255, 0.676)
 }
 
 #setsDisplay {
@@ -39,9 +39,10 @@ body {
     margin-bottom: 15px;
     padding: 15px 30px 15px 30px;
     font-size: x-large;
-    font-family: Arial;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 10px;
-    background-color: azure;
+    background-color: #3c6e71;
+    color: #ffffff;
 }
 
 .info2 {
@@ -50,7 +51,8 @@ body {
     font-family: Arial;
     padding: 10px 15px;
     border-radius: 10px;
-    background-color: azure;
+    background-color: #3c6e71;
+    color: #ffffff;
 }
 
 #exerciseImage {
@@ -64,7 +66,7 @@ body {
 .p-container {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 
 #countdown {
@@ -72,6 +74,6 @@ body {
     font-size: large;
     font-family: 'Roboto', sans-serif;
     padding: 5px 15px;
-    background-color: white;
+    background-color: #353535;
     border-radius: 10px;
 }
