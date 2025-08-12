@@ -8,11 +8,11 @@ function getExercise(num) {
     if (num === 1) {
         return { name: 'Push-ups', image: 'gifs/pushups.gif' };
     } else if (num === 2) {
-        return { name: 'Bodyweight squats', image: 'gifs/squats.gif' };
+        return { name: 'Squats', image: 'gifs/squats.gif' };
     } else if (num === 3) {
         return { name: 'Pull-ups', image: 'gifs/pullups.gif' };
     } else {
-        return { name: 'Crunches or leg raises', image: 'gifs/crunches.gif' };
+        return { name: 'Crunches / Leg raises', image: 'gifs/crunches.gif' };
     }
 }
 
@@ -77,7 +77,7 @@ generateButton.onclick = function() {
     // Update UI with exercise details
     repsDisplay.innerHTML = 'Reps: ' + reps;
     setsDisplay.innerHTML = 'Sets: ' + sets;
-    variationDisplay.innerHTML = 'Exercise: ' + variation.name;
+    variationDisplay.innerHTML = variation.name;
     exerciseImage.src = variation.image;
 
     // Start countdown timer
@@ -90,13 +90,13 @@ function getChallengeMinutes(variation, sets) {
     if (name === 'Push-ups') {
         if (sets === 2) return 2;
         else return 3;
-    } else if (name === 'Bodyweight squats') {
+    } else if (name === 'Squats') {
         if (sets === 2) return 2;
         else return 3;
     } else if (name === 'Pull-ups') {
         if (sets === 2) return 3;
         else return 4;
-    } else if (name === 'Crunches or leg raises') {
+    } else if (name === 'Crunches / Leg raises') {
         if (sets === 2) return 1;
         else return 2;
     } else {
