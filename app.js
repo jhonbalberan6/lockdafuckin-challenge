@@ -53,35 +53,56 @@ function updateCountdown() {
 
 // Main button click handler to generate exercise and start timer
 generateButton.onclick = function() {
-    // Show relevant UI elements
-    variationDisplay.style.display = 'block';
-    setsDisplay.style.display = 'block';
-    repsDisplay.style.display = 'block';
-    exerciseImage.style.display = 'block';
-    countdownEl.style.display = 'block';
+    // Hide the button during the delay
+    generateButton.style.display = 'none';
 
-    // Reset timer and clear any existing intervals
+    // Hide UI first
+    variationDisplay.style.display = 'none';
+    setsDisplay.style.display = 'none';
+    repsDisplay.style.display = 'none';
+    exerciseImage.style.display = 'none';
+    countdownEl.style.display = 'none';
+
+    // Hides the first gif
+    document.getElementById("fivetimesaday").classList.add("hidden");
+
+    // Show loading
+    document.getElementById("loading").classList.remove("hidden");
+
+    // Reset timer
     clearInterval(intervalId);
 
-    // Generate random exercise details
-    const reps = randomInteger(4, 8);
-    const sets = randomInteger(2, 3);
-    const variation = getExercise(randomInteger(1, 4));
+    // Delay the exercise generation
+    setTimeout(function() {
+        // Generate random exercise details
+        const reps = randomInteger(4, 8);
+        const sets = randomInteger(2, 3);
+        const variation = getExercise(randomInteger(1, 4));
 
-    
-    startingMinutes = getChallengeMinutes(variation, sets);
-    time = startingMinutes * 60;
-    updateStartingMinutesDisplay();
+        startingMinutes = getChallengeMinutes(variation, sets);
+        time = startingMinutes * 60;
+        updateStartingMinutesDisplay();
 
+        // Hide loading
+        document.getElementById("loading").classList.add("hidden");
 
-    // Update UI with exercise details
-    repsDisplay.innerHTML = 'Reps: ' + reps;
-    setsDisplay.innerHTML = 'Sets: ' + sets;
-    variationDisplay.innerHTML = variation.name;
-    exerciseImage.src = variation.image;
+        // Show UI after delay
+        variationDisplay.style.display = 'block';
+        setsDisplay.style.display = 'block';
+        repsDisplay.style.display = 'block';
+        exerciseImage.style.display = 'block';
+        countdownEl.style.display = 'block';
 
-    // Start countdown timer
-    intervalId = setInterval(updateCountdown, 1000);
+        // Update content
+        repsDisplay.innerHTML = 'Reps: ' + reps;
+        setsDisplay.innerHTML = 'Sets: ' + sets;
+        variationDisplay.innerHTML = variation.name;
+        exerciseImage.src = variation.image;
+
+        // Start countdown
+        intervalId = setInterval(updateCountdown, 1000);
+
+    }, 3500); // delay in milliseconds (1000 = 1 second)
 };
 
 function getChallengeMinutes(variation, sets) {
