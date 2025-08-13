@@ -1,6 +1,17 @@
 
 body {
     background-color: #284b63;
+    display: flex;
+    align-items: center; /* Vertically centers */
+    justify-content: center; 
+}
+
+#fivetimesaday {
+    margin-top: 120px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    height: 300px;
+    width: 300px;
 }
 
 .center {
@@ -8,7 +19,7 @@ body {
 }
 
 #generateButton {
-    font-size: medium;
+    font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     background-color: #ffffff;
@@ -53,6 +64,7 @@ body {
     border-radius: 10px;
     background-color: #3c6e71;
     color: #ffffff;
+    font-size: x-large;
 }
 
 #exerciseImage {
@@ -71,9 +83,38 @@ body {
 
 #countdown {
     display: none;
-    font-size: large;
+    font-size: xx-large;
     font-family: 'Roboto', sans-serif;
     padding: 5px 15px;
     background-color: #353535;
     border-radius: 10px;
+}
+
+#variationDisplay {
+    margin-top: 120px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#loadingGif {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 200px;
+  border-radius: 50%;
+}
+
+#loadingText {
+  font-family: Arial, sans-serif;
+  font-size: x-large;
+  color: #ffffff;
 }
